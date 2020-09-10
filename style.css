@@ -1,0 +1,232 @@
+html{
+    height: 100%;
+    
+}
+body {margin: 0; height: 100%; overflow: hidden}
+
+/* Navbar section*/
+#header{
+    display: grid;
+    justify-content: end;
+    grid-column-gap: 15px;
+    /* grid-template-columns: auto auto auto 100px; */
+}
+
+a , pre{
+    text-decoration: none;
+    color: rgb(34, 32, 32);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+input:focus{
+    outline:none;
+    box-shadow: 1px 3px 3px rgba(0,0,0,0.1);
+}
+
+input:hover{
+    box-shadow:  1px 3px 3px rgba(0,0,0,0.1);
+}
+/* box-shadow:  0 0 3px 2px rgba(0,0,0,0.1); */
+#gmail{
+    grid-area: gmail;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-top: 20px;
+}
+
+#images{
+    grid-area: images;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding-top: 20px;
+}
+
+#menu{
+    grid-area: menu;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    padding-top: 20px;
+}
+
+#sign_in{
+    grid-area: sign-in;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    background-color: rgb(66, 133, 244);
+    border: 1px solid #4285f4;
+    border-radius: 3px;
+    height: 30px;
+    width: 73px;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 30px;
+    margin-top: 13px;
+}
+
+/* Main Section*/
+#main{
+    display: grid;
+    /* min-height: calc(100vh - 45px - 40px - 40px); */
+    grid-template-columns: 1fr 550px 1fr;
+    grid-template-rows: 230px 62px 65px 250px;
+    grid-template-areas: 
+    ". logo ."
+    ". search ."
+    ". flexbox ."
+    ". languages .";
+}
+
+#logo{
+    grid-area: logo;
+    justify-self: center;
+    padding-top: 110px;
+}
+
+#search{
+    grid-area: search;
+    height: 40px;/*temporary*/
+    width: 69%;
+    justify-self: center;/*temporary*/
+    align-self: centre;
+    border: 1px solid rgba(0, 0 ,0 ,0.151);
+    border-radius: 30px;
+    background-image: url(search_button.png) , url(seacrh_by_voice.png);
+    background-position: left , right;
+    background-position-x: 15px , 445px;
+    padding-left: 40px;
+    padding-right: 60px;
+    background-size: 15px , 18px;
+    background-repeat: no-repeat;
+}
+
+/* #seacrh_by_voice{
+    position: relative;
+    left: 814px;
+    top: 261px;
+} */
+
+#google_search_btn{
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    margin: 11px 4px;
+    margin-right: 6px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    background-color: #f2f2f2;
+    border: 1px solid #dddada;
+    /* f2f2f2 */
+    border-radius: 4px;
+    color: #5F6368;
+}
+
+#random_search_btn{
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    margin: 11px 4px;
+    margin-left: 6px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    background-color: #f2f2f2;
+    border: 1px solid #dddada;
+    /* f2f2f2 */
+    border-radius: 4px;
+    color: #5F6368;
+}
+
+button:focus{
+    outline: none;
+}
+
+#google_search_btn:hover{
+    border: 1px solid rgba(0, 0, 0, 0.342);
+    background-color: whitesmoke;
+    color: black;
+}
+#random_search_btn:hover{
+    border: 1px solid rgba(0, 0, 0, 0.199);
+    background-color: whitesmoke;
+    color: black;
+}
+
+#flexbox{
+    display: flexbox;
+    grid-area: flexbox;
+    justify-self: center;
+    align-self: centre;
+}
+
+#languages{
+    grid-area: languages;
+    justify-content: center;
+    font-size: small;
+    font-family: arial,sans-serif;
+}
+
+/*Pre-Footer Section*/
+#pre-footer{
+    background-color: #f2f2f2;
+    height: 40px;
+    position: fixed;
+    left: 0;
+    bottom: 40px;
+    width: 100%;
+    border: 1px solid rgb(218, 218, 207);
+}
+
+/*Foter Section*/
+#footer{
+    display: grid;
+    grid-template-columns: 100px 80px 80px 130px 1fr 70px 70px 70px ;
+    grid-template-rows: 40px;
+    grid-template-areas: "Advertising Business About how_search_works . Privacy Terms Settings";
+    background-color: #f2f2f2;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#Advertising{
+    grid-area: Advertising;
+    justify-self: center;
+    align-self: center;
+}
+#Business{
+    grid-area: Business;
+    justify-self: center;
+    align-self: center;
+}
+#About{
+    grid-area: About;
+    justify-self: center;
+    align-self: center;
+}
+#how_search_works{
+    grid-area: how_search_works;
+    justify-self: center;
+    align-self: center;
+}
+#Privacy{
+    grid-area: Privacy;
+    justify-self: center;
+    align-self: center;
+}
+#Terms{
+    grid-area: Terms;
+    justify-self: center;
+    align-self: center;
+}
+#Settings{
+    grid-area: Settings;
+    justify-self: center;
+    align-self: center;
+}
